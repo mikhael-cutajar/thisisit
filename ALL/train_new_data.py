@@ -43,11 +43,11 @@ import nrrd
 # print("here")
 # exit()
 # dir_scans = Path("./dataset/part3/")
-dir_scans = Path("./data/raw/")
+dir_scans = Path("/home/mikhael/repos/this_is_it/ALL/data/raw")
 
 dir_checkpoint = Path("./checkpoints/")
 
-no_classes = 29
+no_classes = 19
 
 
 def get_args():
@@ -211,24 +211,24 @@ if __name__ == "__main__":
         13: 2,
         14: 2,
         15: 2,
-        16: 2,
-        17: 2,
-        18: 2,
-        19: 2,
-        20: 5,
-        21: 7,
-        22: 7,
-        23: 5,
-        24: 5,
-        25: 5,
-        26: 5,
-        27: 5,
-        28: 5,
+        16: 10,
+        17: 10,
+        18: 10,
+        # 19: 2,
+        # 20: 5,
+        # 21: 15,
+        # 22: 15,
+        # 23: 5,
+        # 24: 5,
+        # 25: 5,
+        # 26: 5,
+        # 27: 5,
+        # 28: 5,
     }
 
     training_batch_size = 1
     validation_batch_size = 1
-    max_queue_length = 25
+    max_queue_length = 50
     sampler_label = tio.data.LabelSampler(patch_size=(128, 128, 64))
     # sampler_label = tio.data.LabelSampler(
     #     patch_size=(128, 128, 64), label_probabilities=probabilities

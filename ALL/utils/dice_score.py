@@ -58,13 +58,13 @@ def dice_coefficient_score(predicted_image, true_image):
 
 def multi_class_loss(predicted_image, true_image):
 
-    dice_scores = [0] * 29
+    dice_scores = [0] * 19
 
     classes = np.unique(true_image.cpu())
     classes = classes.astype(int)
 
     true_image = (
-        F.one_hot(true_image.to(torch.int64), 29).permute(0, 4, 1, 2, 3).float()
+        F.one_hot(true_image.to(torch.int64), 19).permute(0, 4, 1, 2, 3).float()
     )
 
     num_classes = len(predicted_image[0])
@@ -90,13 +90,13 @@ def multi_class_loss(predicted_image, true_image):
 
 def multi_class_score(predicted_image, true_image):
 
-    dice_scores = [0] * 29
+    dice_scores = [0] * 19
 
     classes = np.unique(true_image.cpu())
     classes = classes.astype(int)
 
     true_image = (
-        F.one_hot(true_image.to(torch.int64), 29).permute(0, 4, 1, 2, 3).float()
+        F.one_hot(true_image.to(torch.int64), 19).permute(0, 4, 1, 2, 3).float()
     )
 
     num_classes = len(predicted_image[0])

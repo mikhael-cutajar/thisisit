@@ -27,10 +27,10 @@ label_index = [
     "Spinal Cord.nrrd",  #: 5,  # 21
     "Trachea.nrrd",  #: 6,  # 28
     # mid
-    "Brachial Plexus.nrrd",  #: 7,  # 1
+    # "Brachial Plexus.nrrd",  #: 7,  # 1
     "ConstrictorNaris.nrrd",  #: 8,  # 3
     "Larynx.nrrd",  #: 9,  # 9
-    "Oral Cavity.nrrd",  #: 10,  # 16
+    # "Oral Cavity.nrrd",  #: 10,  # 16
     "Parotid L.nrrd",  #: 11,  # 17
     "Parotid R.nrrd",  #: 12,  # 18
     "SmgL.nrrd",  #: 13,  # 19
@@ -38,15 +38,15 @@ label_index = [
     "Temporal Lobe L.nrrd",  #: 15,  # 23
     "Temporal Lobe R.nrrd",  #: 16,  # 24
     "Thyroid.nrrd",  #: 17,  # 25
-    "TMJL.nrrd",  #: 18,  # 26
-    "TMJR.nrrd",  #: 19,  # 27
-    "Lens L.nrrd",  #: 20,  # 10
-    "Lens R.nrrd",  #: 21,  # 11
-    "Sublingual Gland.nrrd",  # 22,  # 22
+    # "TMJL.nrrd",  #: 18,  # 26
+    # "TMJR.nrrd",  #: 19,  # 27
+    # "Lens L.nrrd",  #: 20,  # 10
+    # "Lens R.nrrd",  #: 21,  # 11
+    # "Sublingual Gland.nrrd",  # 22,  # 22
     # low
-    "Ear-L.nrrd",  # 23,  # 4
-    "Ear-R.nrrd",  # 24,  # 5
-    "Hypophysis.nrrd",  #: 25,  # 8
+    # "Ear-L.nrrd",  # 23,  # 4
+    # "Ear-R.nrrd",  # 24,  # 5
+    # "Hypophysis.nrrd",  #: 25,  # 8
     "Optical Chiasm.nrrd",  #: 26,  # 13
     "Optical Nerve L.nrrd",  #: 27,  # 14
     "Optical Nerve R.nrrd",  #: 28,  # 15
@@ -123,6 +123,6 @@ def evaluate(net, dataloader, device):
         # write a row to the csv file
         writer.writerow(dice_scores)
 
-    total = total / 28
+    total = total / 18
     net.train()
     return total

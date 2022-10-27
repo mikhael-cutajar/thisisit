@@ -7,10 +7,10 @@ import matplotlib.pyplot as plt
 import pdb
 
 reference_direction = np.identity(3).flatten()
-reference_spacing = np.array((1.0, 1.0, 2.5))
+reference_spacing = np.array((1.0, 1.0, 1))
 
 
-os.chdir("../PDDCA")
+os.chdir("ALL/data/raw")
 num = 0
 for i in os.listdir("."):
     # for i in ['0522c0576']:
@@ -20,7 +20,7 @@ for i in os.listdir("."):
     print("start")
     os.chdir(i)
 
-    image = sitk.ReadImage("img.nrrd")
+    image = sitk.ReadImage("real_image.nrrd")
 
     image_size = image.GetSize()
     image_spacing = image.GetSpacing()
@@ -51,29 +51,29 @@ for i in os.listdir("."):
         "Spinal Cord.nrrd": 5,  # 21
         "Trachea.nrrd": 6,  # 28
         # mid
-        "Brachial Plexus.nrrd": 7,  # 1
-        "ConstrictorNaris.nrrd": 8,  # 3
-        "Larynx.nrrd": 9,  # 9
-        "Oral Cavity.nrrd": 10,  # 16
-        "Parotid L.nrrd": 11,  # 17
-        "Parotid R.nrrd": 12,  # 18
-        "SmgL.nrrd": 13,  # 19
-        "SmgR.nrrd": 14,  # 20
-        "Temporal Lobe L.nrrd": 15,  # 23
-        "Temporal Lobe R.nrrd": 16,  # 24
-        "Thyroid.nrrd": 17,  # 25
-        "TMJL.nrrd": 18,  # 26
-        "TMJR.nrrd": 19,  # 27
-        "Lens L.nrrd": 20,  # 10
-        "Lens R.nrrd": 21,  # 11
-        "Sublingual Gland.nrrd": 22,  # 22
+        # "Brachial Plexus.nrrd": 7,  # 1
+        "ConstrictorNaris.nrrd": 7,  # 3
+        "Larynx.nrrd": 8,  # 9
+        # "Oral Cavity.nrrd": 10,  # 16
+        "Parotid L.nrrd": 9,  # 17
+        "Parotid R.nrrd": 10,  # 18
+        "SmgL.nrrd": 11,  # 19
+        "SmgR.nrrd": 12,  # 20
+        "Temporal Lobe L.nrrd": 13,  # 23
+        "Temporal Lobe R.nrrd": 14,  # 24
+        "Thyroid.nrrd": 15,  # 25
+        # "TMJL.nrrd": 18,  # 26
+        # "TMJR.nrrd": 19,  # 27
+        # "Lens L.nrrd": 20,  # 10
+        # "Lens R.nrrd": 21,  # 11
+        # "Sublingual Gland.nrrd": 22,  # 22
         # low
-        "Ear-L.nrrd": 23,  # 4
-        "Ear-R.nrrd": 24,  # 5
-        "Hypophysis.nrrd": 25,  # 8
-        "Optical Chiasm.nrrd": 26,  # 13
-        "Optical Nerve L.nrrd": 27,  # 14
-        "Optical Nerve R.nrrd": 28,  # 15
+        # "Ear-L.nrrd": 23,  # 4
+        # "Ear-R.nrrd": 24,  # 5
+        # "Hypophysis.nrrd": 25,  # 8
+        "Optical Chiasm.nrrd": 16,  # 13
+        "Optical Nerve L.nrrd": 17,  # 14
+        "Optical Nerve R.nrrd": 18,  # 15
     }
     # generate itk label
 
